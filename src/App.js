@@ -41,28 +41,22 @@ const ContactBox = () => {
 }
 
 const SkillBox = () => {
+  const skillset = [
+    'JavaScript', 'HTML5', 'CSS', 'React.js',
+    'Node.js', 'Express', 'MySQL', 'MongoDB',
+    'GIT', 'Google Apps Script', 'Next.js', 'UI Design',
+    'Bootstrap', 'Agile Methodologies', 'Problem Solving', 'Communication'
+  ];
+  
   return (
     <div className='skills'>
       <div className='header'>
         <img src={skills} alt='' height={25} style={{ marginRight: '0.5em' }}></img>
         <h3 style={{ width: '100%', marginTop: '0', marginBottom: '0', color: '#373a41', marginLeft: '-0' }}>SKILLS</h3>
       </div>
-      <p style={{ width: '25%' }}>JavaScript</p>
-      <p style={{ width: '25%' }}>HTML5</p>
-      <p style={{ width: '25%' }}>CSS</p>
-      <p style={{ width: '25%' }}>React.js</p>
-      <p style={{ width: '25%' }}>Node.js</p>
-      <p style={{ width: '25%' }}>Express</p>
-      <p style={{ width: '25%' }}>MySQL</p>
-      <p style={{ width: '25%' }}>MongoDB</p>
-      <p style={{ width: '25%' }}>GIT</p>
-      <p style={{ width: '25%' }}>Google Apps Script</p>
-      <p style={{ width: '25%' }}>Next.js</p>
-      <p style={{ width: '25%' }}>UI Design</p>
-      <p style={{ width: '25%' }}>Bootstrap</p>
-      <p style={{ width: '25%' }}>Agile Methodologies</p>
-      <p style={{ width: '25%' }}>Problem Solving</p>
-      <p style={{ width: '25%' }}>Communication</p>
+      {skillset.map((data, index) => (
+        <p key={index} style={{ width: '25%' }}>{data}</p>
+      ))}
     </div>
   )
 }
@@ -185,7 +179,7 @@ const EducationBox = () => {
 
           <div className='bullet-row'>
             <div className='bullet' style={{ width: '9px' }}></div>
-            <small>Relevant coursework: Information systems design, Object-Oriented Programming, Data Structures and Algorithms, 
+            <small>Relevant coursework: Information systems design, Object-Oriented Programming, Data Structures and Algorithms,
               Software Development, Computer Science, Database Management Systems</small>
           </div>
         </div>
@@ -202,10 +196,10 @@ class App extends React.Component {
           <h1 className='name' style={{ marginTop: '0.25em' }}>Daniel Mann</h1>
           <h3 className='title'>Software Developer</h3>
           <p className='description'>
-          I am a motivated individual with a passion for software development, 
-          specifically the challenge it provides and the reward of solving complex problems. 
-          I enjoy thinking outside the box and creating unique solutions that align with my strengths, 
-          while constantly learning something new every day.
+            I am a motivated individual with a passion for software development,
+            specifically the challenge it provides and the reward of solving complex problems.
+            I enjoy thinking outside the box and creating unique solutions that align with my strengths,
+            while constantly learning something new every day.
           </p>
 
           <ContactBox />
