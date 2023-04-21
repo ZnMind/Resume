@@ -97,8 +97,8 @@ const WorkBox = () => {
           </div>
 
           <div className='new-listing'>
-            <h4 className='job'>Innovate Birmingham</h4>
-            <h4 className='company'>Full Stack Web Development</h4>
+            <h4 className='job'>Full Stack Web Developer</h4>
+            <h4 className='company'>Innovate Birmingham</h4>
             <small className='date'>12/2021 - 05/2022</small>
             <br></br>
 
@@ -124,8 +124,8 @@ const WorkBox = () => {
           </div>
 
           <div className='new-listing'>
-            <h4 className='job'>Tata Consultancy Services</h4>
-            <h4 className='company'>Annuities Account Representative</h4>
+            <h4 className='job'>Annuities Account Representative</h4>
+            <h4 className='company'>Tata Consultancy Services</h4>
             <small className='date'>10/2020 - 12/2021</small>
             <br></br>
 
