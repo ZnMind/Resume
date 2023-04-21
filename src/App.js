@@ -1,14 +1,6 @@
 import React, { useRef } from 'react';
 import ReactToPrint from 'react-to-print';
-import git from './img/GH.svg';
-import linkedIn from './img/LI.svg';
-import location from './img/Loc.svg';
-import email from './img/Email.svg';
-import phone from './img/Phone.svg';
-import web from './img/Site.svg';
-import work from './img/Work.svg';
-import school from './img/School.svg';
-import skills from './img/Skills.svg';
+import image from './img/imgHelper';
 import './App.css';
 
 const FancyLine = ({ color1, color2, color3, size }) => {
@@ -24,16 +16,16 @@ const FancyLine = ({ color1, color2, color3, size }) => {
 const ContactBox = () => {
   return (
     <div className='contacts'>
-      <div className='row'><img src={email} height={25} style={{ marginRight: '0.75em' }} alt=''></img>damann1072@gmail.com</div>
-      <div className='row'><img src={phone} height={25} style={{ marginRight: '0.75em' }} alt=''></img>(205) 936-3366</div>
-      <div className='row'><img src={location} height={25} style={{ marginRight: '0.75em' }} alt=''></img>Birmingham, AL</div>
-      <div className='row'><img src={linkedIn} height={25} style={{ marginRight: '0.75em' }} alt=''></img>
+      <div className='row'><img src={image.email} height={25} style={{ marginRight: '0.75em' }} alt=''></img>damann1072@gmail.com</div>
+      <div className='row'><img src={image.phone} height={25} style={{ marginRight: '0.75em' }} alt=''></img>(205) 936-3366</div>
+      <div className='row'><img src={image.location} height={25} style={{ marginRight: '0.75em' }} alt=''></img>Birmingham, AL</div>
+      <div className='row'><img src={image.linkedIn} height={25} style={{ marginRight: '0.75em' }} alt=''></img>
         <a href='https://www.linkedin.com/in/mann-dan' target='_blank' rel='noreferrer'>linkedin.com/in/mann-dan</a>
       </div>
-      <div className='row'><img src={git} height={25} style={{ marginRight: '0.75em' }} alt=''></img>
+      <div className='row'><img src={image.github} height={25} style={{ marginRight: '0.75em' }} alt=''></img>
         <a href='https://github.com/ZnMind' target='_blank' rel='noreferrer'>github.com/ZnMind</a>
       </div>
-      <div className='row'><img src={web} height={25} style={{ marginRight: '0.75em' }} alt=''></img>
+      <div className='row'><img src={image.site} height={25} style={{ marginRight: '0.75em' }} alt=''></img>
         <a href='https://dmann.netlify.app' target='_blank' rel='noreferrer'>dmann.netlify.app</a>
       </div>
     </div>
@@ -47,11 +39,11 @@ const SkillBox = () => {
     'GIT', 'Google Apps Script', 'Next.js', 'UI Design',
     'Bootstrap', 'Agile Methodologies', 'Problem Solving', 'Communication'
   ];
-  
+
   return (
     <div className='skills'>
       <div className='header'>
-        <img src={skills} alt='' height={25} style={{ marginRight: '0.5em' }}></img>
+        <img src={image.skills} alt='' height={25} style={{ marginRight: '0.5em' }}></img>
         <h3 style={{ width: '100%', marginTop: '0', marginBottom: '0', color: '#373a41', marginLeft: '-0' }}>SKILLS</h3>
       </div>
       {skillset.map((data, index) => (
@@ -65,7 +57,7 @@ const WorkBox = () => {
   return (
     <>
       <div className='header'>
-        <img src={work} alt='' height={25} style={{ marginRight: '0.5em' }}></img>
+        <img src={image.work} alt='' height={25} style={{ marginRight: '0.5em' }}></img>
         <h3 style={{ width: '100%', marginTop: '0', marginBottom: '0', color: '#373a41' }}>EXPERIENCE</h3>
       </div>
 
@@ -159,7 +151,7 @@ const EducationBox = () => {
   return (
     <>
       <div className='header'>
-        <img src={school} alt='' height={30} style={{ marginRight: '0.5em' }}></img>
+        <img src={image.school} alt='' height={30} style={{ marginRight: '0.5em' }}></img>
         <h3 style={{ width: '100%', marginTop: '0', marginBottom: '0', color: '#373a41', marginLeft: '-0.1em' }}>EDUCATION</h3>
       </div>
 
