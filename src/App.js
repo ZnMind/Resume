@@ -148,6 +148,12 @@ const WorkBox = () => {
 }
 
 const EducationBox = () => {
+  const bullets = [
+    <small>Project based learning through coursework with a strong emphasis on <b>leadership</b> and <b>teamwork</b> in a group setting</small>,
+    <small>Relevant coursework: Information systems design, Object-Oriented Programming, Data Structures and Algorithms,
+      Software Development, Computer Science, Database Management Systems</small>
+  ];
+
   return (
     <>
       <div className='header'>
@@ -164,16 +170,13 @@ const EducationBox = () => {
           <h4 className='job'>University of Alabama at Birmingham</h4>
           <h4 className='company'>Bachelor of Science in Information Systems</h4>
 
-          <div className='bullet-row'>
-            <div className='bullet'></div>
-            <small>Project based learning through coursework with a strong emphasis on <b>leadership</b> and <b>teamwork</b> in a group setting</small>
-          </div>
+          {bullets.map((data, index) => (
+            <div key={index} className='bullet-row'>
+              {index === 1 ? <div className='bullet' style={{ width: '9px' }}></div> : <div className='bullet'></div>}
+              {data}
+            </div>
+          ))}
 
-          <div className='bullet-row'>
-            <div className='bullet' style={{ width: '9px' }}></div>
-            <small>Relevant coursework: Information systems design, Object-Oriented Programming, Data Structures and Algorithms,
-              Software Development, Computer Science, Database Management Systems</small>
-          </div>
         </div>
       </div>
     </>
