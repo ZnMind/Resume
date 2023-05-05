@@ -35,9 +35,9 @@ const ContactBox = () => {
 const SkillBox = () => {
   const skillset = [
     'JavaScript', 'HTML5', 'CSS', 'React.js',
-    'Node.js', 'Express', 'MySQL', 'MongoDB',
-    'GIT', 'Google Apps Script', 'Next.js', 'UI Design',
-    'Bootstrap', 'Agile Methodologies', 'Problem Solving', 'Communication'
+    'Redux', 'Node.js', 'Express', 'MySQL', 
+    'MongoDB', 'GIT', 'Google Apps Script', 'Next.js', 
+    'UI Design', 'Bootstrap', 'Agile Methodologies', 'Problem Solving'
   ];
 
   return (
@@ -146,7 +146,7 @@ const EducationBox = () => {
             </div>
           ))}
         </div>
-        
+
       </div>
     </>
   )
