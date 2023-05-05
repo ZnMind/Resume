@@ -54,6 +54,28 @@ const SkillBox = () => {
 }
 
 const WorkBox = () => {
+  const titles = ['Web Developer', 'Full Stack Web Developer', 'Annuities Account Representative'];
+  const companies = ['Innov8tive Strategies, LLC', 'Innovate Birmingham', 'Tata Consultancy Services'];
+  const dates = ['07/2022 - Present', '12/2021 - 05/2022', '10/2020 - 12/2021'];
+  const bullets = [
+    [
+      <small>Coordinating with CEO to improve company website <b>UI/UX design</b></small>,
+      <small>Implemented <b>RESTful API</b> for live Instagram feed</small>,
+      <small>Driving greater traffic to website through <b>SEO</b> best practices</small>,
+      <small>Consulting with non-profit clients to grow their website and, through that, their impact in their community</small>
+    ],
+    [
+      <small>Web development boot camp to continue growth and challenge myself as a software developer</small>,
+      <small>Actively developing <b>Front-End</b> applications using <b>React.js</b></small>,
+      <small>Building <b>API</b> and <b>Back-End</b> architecture with <b>Node.js</b> and <b>Express</b></small>,
+      <small>Designing relational databases with <b>MySQL</b> to handle robust data sets</small>
+    ],
+    [
+      <small>Third Party Administrator to a multi-billion dollar company providing in-depth knowledge on our retirement products and investment offerings</small>,
+      <small>Updated and oversaw client information across several departments and ensured its accuracy in our <b>CRM</b> software</small>
+    ]
+  ];
+
   return (
     <>
       <div className='header'>
@@ -71,77 +93,24 @@ const WorkBox = () => {
         </div>
 
         <div>
-          <h4 className='job'>Web Developer</h4>
-          <h4 className='company'>Innov8tive Strategies, LLC</h4>
-          <small className='date'>07/2022 - Present</small>
-          <br></br>
+          {titles.map((title, index) => (
+            <div key={index}>
+              {index > 0 ? <div className='new-listing'></div> : ''}
+              <h4 className='job'>{title}</h4>
+              <h4 className='company'>{companies[index]}</h4>
+              <small className='date'>{dates[index]}</small>
+              <br></br>
 
-          <div className='bullet-row'>
-            <div className='bullet'></div>
-            <small>Coordinating with CEO to improve company website <b>UI/UX design</b></small>
-          </div>
-
-          <div className='bullet-row'>
-            <div className='bullet'></div>
-            <small>Implemented <b>RESTful API</b> for live Instagram feed</small>
-          </div>
-
-          <div className='bullet-row'>
-            <div className='bullet'></div>
-            <small>Driving greater traffic to website through <b>SEO</b> best practices</small>
-          </div>
-
-          <div className='bullet-row'>
-            <div className='bullet'></div>
-            <small>Consulting with non-profit clients to grow their website and, through that, their impact in their community</small>
-          </div>
-
-          <div className='new-listing'>
-            <h4 className='job'>Full Stack Web Developer</h4>
-            <h4 className='company'>Innovate Birmingham</h4>
-            <small className='date'>12/2021 - 05/2022</small>
-            <br></br>
-
-            <div className='bullet-row'>
-              <div className='bullet'></div>
-              <small>Web development boot camp to continue growth and challenge myself as a software developer</small>
+              {bullets[index].map((bullet, i) => (
+                <div key={i} className='bullet-row'>
+                  <div className='bullet-box'><div className='bullet'></div></div>
+                  {bullet}
+                </div>
+              ))}
             </div>
-
-            <div className='bullet-row'>
-              <div className='bullet'></div>
-              <small>Actively developing <b>Front-End</b> applications using <b>React.js</b></small>
-            </div>
-
-            <div className='bullet-row'>
-              <div className='bullet'></div>
-              <small>Building <b>API</b> and <b>Back-End</b> architecture with <b>Node.js</b> and <b>Express</b></small>
-            </div>
-
-            <div className='bullet-row'>
-              <div className='bullet'></div>
-              <small>Designing relational databases with <b>MySQL</b> to handle robust data sets</small>
-            </div>
-          </div>
-
-          <div className='new-listing'>
-            <h4 className='job'>Annuities Account Representative</h4>
-            <h4 className='company'>Tata Consultancy Services</h4>
-            <small className='date'>10/2020 - 12/2021</small>
-            <br></br>
-
-            <div className='bullet-row'>
-              {/* For some reason 2 liners distort the bullets. Have to manually adjust the width */}
-              <div className='bullet' style={{ width: '6px' }}></div>
-              <small>Third Party Administrator to a multi-billion dollar company providing in-depth knowledge on our retirement products and investment offerings</small>
-            </div>
-
-            <div className='bullet-row'>
-              <div className='bullet'></div>
-              <small>Updated and oversaw client information across several departments and ensured its accuracy in our <b>CRM</b> software</small>
-            </div>
-
-          </div>
+          ))}
         </div>
+
       </div>
     </>
   )
@@ -170,14 +139,14 @@ const EducationBox = () => {
           <h4 className='job'>University of Alabama at Birmingham</h4>
           <h4 className='company'>Bachelor of Science in Information Systems</h4>
 
-          {bullets.map((data, index) => (
+          {bullets.map((bullet, index) => (
             <div key={index} className='bullet-row'>
-              {index === 1 ? <div className='bullet' style={{ width: '9px' }}></div> : <div className='bullet'></div>}
-              {data}
+              <div className='bullet-box'><div className='bullet'></div></div>
+              {bullet}
             </div>
           ))}
-
         </div>
+        
       </div>
     </>
   )
