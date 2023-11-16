@@ -99,10 +99,9 @@
 
 .circle {
   background-color: steelblue;
-  height: 7.5px;
-  width: 7.5px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
-  margin-bottom: 0.2em;
 }
 
 .bullet-row {
@@ -154,7 +153,6 @@
   font-style: italic;
   padding-left: 1.25em;
   margin-top: 0;
-  margin-bottom: 10em;
 }
 
 .new-listing {

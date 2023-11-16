@@ -3,6 +3,7 @@ import ReactToPrint from 'react-to-print';
 import image from './img/imgHelper';
 import './App.css';
 
+// Fancy three color line
 const FancyLine = ({ color1, color2, color3, size }) => {
   return (
     <div style={{ display: 'flex', marginTop: '0.5em' }}>
@@ -13,6 +14,7 @@ const FancyLine = ({ color1, color2, color3, size }) => {
   )
 }
 
+// Contact Section
 const ContactBox = () => {
   return (
     <div className='contacts'>
@@ -32,12 +34,12 @@ const ContactBox = () => {
   )
 }
 
+// Skills Section
 const SkillBox = () => {
   const skillset = [
-    'JavaScript', 'HTML5', 'CSS', 'React',
-    'Redux', 'Node.js', 'Express', 'MySQL',
-    'MongoDB', 'WordPress', 'GIT', 'Next.js',
-    'UI Design', 'Bootstrap', 'Agile Methodologies'
+    'JavaScript (ES6)', 'Express.js', 'MySQL', 'HTML5', 'Bootstrap',
+    'React', 'Next.js', 'MongoDB', 'CSS', 'WordPress',
+    'Node.js', 'Redux', 'Firebase', 'UI Design', 'Agile Methodologies'
   ];
 
   return (
@@ -53,21 +55,23 @@ const SkillBox = () => {
   )
 }
 
+// Experience Section
 const WorkBox = () => {
-  const titles = ['Software Developer (Contract)', 'Web Developer (Contract)', 'Full Stack Web Developer'];
+  const titles = ['Web Developer (Contract)', 'Web Developer (Contract)', 'Full Stack Web Developer'];
   const companies = ['Relay', 'Innov8tive Strategies, LLC', 'Innovate Birmingham'];
   const dates = ['06/2023 - Present', '07/2022 - 06/2023', '12/2021 - 05/2022'];
   const bullets = [
     [
       <small>
-        Enhanced client data monitoring efficiency by integrating the <b>Front-End</b> website with the <b>Back-End</b> CRM system, and
-        implemented seamless data synchronization, resulting in a marked increase in data tracking and accuracy.
+        Enhancing data monitoring efficiency by integrating the <b>Front-End</b> website with the <b>Back-End</b> CRM system, and
+        administering seamless data synchronization, resulting in a marked increase in data tracking and accuracy
       </small>,
-      <small>Increased <b>WordPress</b> site indexability by a significant margin through plugins such as <b>YoastSEO</b></small>,
+      <small>Increasing <b>WordPress</b> site indexability by a significant margin through plugins such as <b>YoastSEO</b></small>,
       <small>
-        Built a webscraping software tool using <b>Node.js</b>, <b>Express</b>, and <b>Cheerio</b> to effectively monitor site structure
-        and ensure all <b>SEO</b> best practices were met
-      </small>
+        Designing and implementing a webscraping software tool using <b>Node.js</b>, <b>Express</b>, and <b>Cheerio</b> to effectively
+        scrape and give reports on site structure and ensure all <b>SEO</b> best practices are met
+      </small>,
+      <small>Elevating <b>UX/UI</b> attractiveness and performance through utilizing <b>jQuery</b> and unique <b>CSS</b> stylings</small>
     ],
     [
       <small>Collaborated with the CEO to improve company website <b>UI/UX design</b>, performance, and reliability</small>,
@@ -76,7 +80,7 @@ const WorkBox = () => {
       <small>Consulted with non-profit clients to grow their own web presence and, through that, their impact in the community</small>
     ],
     [
-      <small>Web development boot camp to grow my <b>coding</b> abilities and challenge myself as a <b>JavaScript</b> developer</small>,
+      <small><b>Web development</b> boot camp to improve my <b>JavaScript</b> proficiency and challenge my <b>coding</b> ability</small>,
       <small>Actively developed <b>Front-End</b> applications using <b>React</b> with features such as <b>React Hooks</b> and <b>React Router</b></small>,
       <small>
         Built <b>API</b> and <b>Back-End</b> architecture with <b>Node.js</b> and <b>Express</b>,
@@ -93,29 +97,28 @@ const WorkBox = () => {
       </div>
 
       <div style={{ display: 'flex' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '0.55em', marginTop: '0.5em' }}>
-          <div className='circle' style={{ marginTop: '0' }}></div>
-          <div className='vert' style={{ height: 'calc(118px + 1.5em)' }}></div>
-          <div className='circle'></div>
-          <div className='vert'></div>
-          <div className='circle'></div>
-        </div>
-
         <div>
           {titles.map((title, index) => (
-            <div key={index}>
+            <div key={index} style={{ marginLeft: 'calc(25px / 2 - 4px)' }}>
               {index > 0 ? <div className='new-listing'></div> : ''}
-              <h4 className='job'>{title}</h4>
-              <h4 className='company'>{companies[index]}</h4>
-              <small className='date'>{dates[index]}</small>
-              <br></br>
+              <div style={{ display: 'flex', alignItems: 'center' }}><div className='circle'></div><h4 className='job'>{title}</h4></div>
 
-              {bullets[index].map((bullet, i) => (
-                <div key={i} className='bullet-row'>
-                  <div className='bullet-box'><div className='bullet'></div></div>
-                  {bullet}
+              <div style={{ display: 'flex' }}>
+                <div style={{ borderLeft: '2px solid #373a41', width: '0px', marginLeft: '3px', marginRight: '5px' }}></div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <h4 className='company'>{companies[index]}</h4>
+                  <small className='date'>{dates[index]}</small>
+
+                  {bullets[index].map((bullet, i) => (
+                    <div key={i} className='bullet-row'>
+                      <div className='bullet-box'><div className='bullet'></div></div>
+                      {bullet}
+                    </div>
+                  ))}
+
                 </div>
-              ))}
+              </div>
+
             </div>
           ))}
         </div>
@@ -125,6 +128,7 @@ const WorkBox = () => {
   )
 }
 
+// Education Section
 const EducationBox = () => {
   const bullets = [
     <small>Project based learning through coursework with a strong emphasis on <b>leadership</b> and <b>teamwork</b> in a group setting</small>,
@@ -139,21 +143,23 @@ const EducationBox = () => {
         <h3 style={{ width: '100%', marginTop: '0', marginBottom: '0', color: '#373a41', marginLeft: '-0.1em' }}>EDUCATION</h3>
       </div>
 
-      <div style={{ display: 'flex' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '0.6em' }}>
-          <div className='circle' style={{ marginTop: '0.5em' }}></div>
-        </div>
-
+      <div style={{ display: 'flex', marginLeft: 'calc(30px / 2 - 4px)' }}>
         <div>
-          <h4 className='job'>University of Alabama at Birmingham</h4>
-          <h4 className='company'>Bachelor of Science in Information Systems</h4>
+          <div style={{ display: 'flex', alignItems: 'center' }}><div className='circle'></div><h4 className='job'>University of Alabama at Birmingham</h4></div>
+          <div style={{ display: 'flex' }}>
+            <div style={{ borderLeft: '2px solid #373a41', width: '0px', marginLeft: '3px', marginRight: '5px' }}></div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <h4 className='company'>Bachelor of Science in Information Systems</h4>
 
-          {bullets.map((bullet, index) => (
-            <div key={index} className='bullet-row'>
-              <div className='bullet-box'><div className='bullet'></div></div>
-              {bullet}
+            {bullets.map((bullet, index) => (
+              <div key={index} className='bullet-row'>
+                <div className='bullet-box'><div className='bullet'></div></div>
+                {bullet}
+              </div>
+            ))}
             </div>
-          ))}
+
+          </div>
         </div>
 
       </div>
@@ -161,21 +167,13 @@ const EducationBox = () => {
   )
 }
 
-/** 
- * List of key words/phrases hidden behind the resume to attempt to get past ATS and have a real person see the resume.
- * Seems slightly unethical so won't be included. Fun to experiment, though.
+/*  
+  Not Implemented.
+  Potential list of key words/phrases hidden behind the resume to attempt to get past ATS and have a real person see the resume.
+  Seems unethical so won't be included. Fun to experiment, though.
  */
 const ATSKeywords = () => {
-  let keys = [
-    'javascript', 'javascript', 'javascript', 'javascript', 'javascript', 'javascript', 'javascript', 'javascript',
-    'front-end', 'front-end', 'front-end', 'back-end', 'back-end', 'back-end',
-    'Front-end development ', 'Back-end development ', 'Full-stack development ', 'Agile ', 'Scrum ', 'Continuous Integration ',
-    'Continuous Deployment ', 'DevOps ', 'Git ', 'Docker ', 'Windows ', 'Object-Oriented Programming ', 'Amazon Web Services ',
-    'Data Structures and Algorithms ', 'Problem Solving ', 'Analytical Skills ', 'Windows ', 'MacOS ', 'WordPress ', 'React Hooks ',
-    'React Router ', 'Component-Based Architecture ', 'Single Page Applications (SPAs) ', 'Responsive Web Design ', 'Webpack ',
-    'Babel ', 'Version Control ', 'ES6/ES7 ', 'NPM/Yarn ', 'Cross-Browser Compatibility ', 'Jest ', 'Server-Side Rendering (SSR) ',
-    'GraphQL '
-  ];
+  let keys = [];
 
   return (
     <div className='ats'>
@@ -186,7 +184,10 @@ const ATSKeywords = () => {
   )
 }
 
-// Just a test to see what would happen
+/* 
+  Not Implemented.
+  Just a test to see what would happen
+*/
 const Hover = () => {
   const [hover, setHover] = useState(false);
 
